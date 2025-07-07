@@ -1,15 +1,21 @@
 .our-story {
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  padding: 8rem 0 4rem;
+  gap: 2.75rem;
+  padding: 7rem 0 4rem;
+  align-items: center;
 }
 
 .our-story-description {
   grid-column: 1;
+  color: #2e3b3a;
 }
 
 .our-story-description p {
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.7rem;
+  color: #4a5c5a;
 }
 
 .our-story-chefs {
@@ -17,28 +23,37 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  height: 25.5rem;
+  gap: 1.25rem;
+  height: 26rem;
   margin: auto 0;
 }
 
 .our-story-chefs img {
   position: absolute;
-  width: 23.5rem;
-  height: 15.75rem;
-  border-radius: 1rem;
+  width: 22rem;
+  height: 15rem;
+  border-radius: 0.85rem;
   object-fit: cover;
-  object-position: 78% 50%;
+  object-position: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease-in-out, filter 0.3s ease;
+}
+
+.our-story-chefs img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
 }
 
 .our-story-chefs img:nth-of-type(1) {
   top: 0;
   right: 0;
+  z-index: 2;
 }
 
 .our-story-chefs img:nth-of-type(2) {
   bottom: 0;
   left: 0;
+  z-index: 1;
 }
 
 @media (max-width: 915px) {
@@ -53,12 +68,13 @@
     justify-content: space-evenly;
     flex-direction: row;
     height: unset;
+    margin-top: 2rem;
   }
 
   .our-story-chefs img {
     position: static;
-    max-width: 50%;
-    height: 26rem;
+    max-width: 45%;
+    height: 24rem;
     width: unset;
   }
 }
@@ -74,5 +90,6 @@
 
   .our-story-chefs img {
     max-width: 100%;
+    height: 20rem;
   }
 }

@@ -1,11 +1,13 @@
 .hero {
-  padding-top: 1.875rem;
-  background-color: #495e57;
+  padding-top: 2rem;
+  background-color: #3c4948;
 }
 
 .hero .container {
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  gap: 3rem;
+  align-items: center;
 }
 
 .hero-information {
@@ -13,49 +15,56 @@
 }
 
 .hero-information h1 {
-  color: #f4ce14;
-  font-size: 3.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  color: #ffa726;
+  font-size: 3.25rem;
+  line-height: 3.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-information h2 {
-  color: #ffffff;
-  font-size: 2.25rem;
-  height: 2.25rem;
-  line-height: 2.25rem;
+  color: #fefefe;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .hero-information p {
-  margin-top: 1.5rem;
-  color: #ffffff;
+  margin-top: 1.25rem;
+  color: #f4f4f4;
   font-size: 1.125rem;
+  line-height: 1.75rem;
+  max-width: 90%;
 }
 
 .hero-information .button-primary {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
+  background-color: #d97228;
+  border-color: #d97228;
 }
 
 .hero-information .button-primary:hover,
 .hero-information .button-primary:focus {
-  border-color: #f4ce14;
+  border-color: #ffa726;
+  background-color: #2e3b3a;
+  color: #ffffff;
 }
 
 .hero-image {
   grid-column: 2;
   width: 100%;
-  height: 24rem;
-  margin-bottom: -4.375rem;
+  height: 23rem;
+  margin-bottom: -3.5rem;
   justify-self: end;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 792px) {
   .hero .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    gap: 2rem;
   }
 
   .hero-information {
@@ -65,5 +74,7 @@
   .hero-image {
     grid-column: 1;
     grid-row: 2;
+    justify-self: center;
+    margin-bottom: 0;
   }
 }

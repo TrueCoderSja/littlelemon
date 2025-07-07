@@ -10,8 +10,8 @@ const Hero = () => {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>
-            We are a family owned Mediterranean restaurant, focused on
-            traditional recipes served with a modern twist.
+            A cozy corner where Mediterranean flavors meet modern creativity.
+            Taste the tradition, stay for the vibes.
           </p>
           <HashLink className="button-primary" to="/reservations">
             Reserve a table
