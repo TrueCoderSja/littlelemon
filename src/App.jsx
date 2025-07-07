@@ -1,31 +1,27 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./components/pages/Home/Home";
+import Reservations from "./components/pages/Reservations/Reservations";
+import ConfirmedReservation from "./components/pages/Reservations/confirmedReservation";
+import NotFound from "./components/pages/NotFound/NotFound";
 
-export default function App() {
+const App = () => {
   return (
     <>
-      <Header />
-      <main>
+      <Layout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route
+            path="/confirmedReservation"
+            element={<ConfirmedReservation />}
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </main>
+      </Layout>
     </>
-  )
-}
+  );
+};
 
-function Header() {
-  return (
-    <header id="header">
-      <img src="res.png" alt="Little Lemon Restaurant Logo" />
-      Header
-    </header>
-  )
-}
-
-function HomePage() {
-  return (
-    <>
-      <p>Home</p>
-    </>
-  )
-}
+export default App;
